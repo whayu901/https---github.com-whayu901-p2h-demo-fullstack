@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "P2H & P5M",
+    "slug": "p2h-p5m-demo",
+    "scheme": "p2hdemo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,6 +21,23 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Lokasi dipakai untuk mencatat titik inspeksi."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Kamera dipakai untuk memotret unit dan kondisi lapangan saat inspeksi.",
+          "photosPermission": "Galeri dipakai untuk memilih foto inspeksi jika kamera tidak tersedia."
+        }
+      ]
+    ]
   }
 }
